@@ -1,0 +1,129 @@
+Olgierd Jankovski
+LSP: 2110561
+
+Kodavimo Standartas
+
+
+1. Kintamųjų vardai:
+	
+	1.1 Kiekvienas kintamasis turi būti pavadintas prasmingai, pvz.:
+	    int duomenys;			// teisingai
+	    int asdasd; 			// neteisingai
+	    int is_karto_minus_taskas;		// neteisingai
+	
+	1.2 Kintamojo pavadinimas, kuris susideda iš dviejų žodžių,
+	    tūri jungtis apatiniu brūkšneliu (" _ "), pvz.:
+	    char *data_pointer;			// teisingai
+	    char *DataPointer;			// neteisingai
+	    char *datapointer;			// neteisingai
+
+2. Komentarai
+
+	2.1 Komentarai, nusakantys funkcijos/struktūros paskirtį, rašomi taip:
+	/*** Ši funkcija nieko nedaro ***/
+	
+	2.2 komentarai tam tikrų funkcijų viduje rašomi taip:
+	// šis blokas skaičiuoja...
+	
+	2.3 Komentarai visiškai nesusiję su kodu rašomi taip:
+	/*
+		komentaras
+		komentaras
+	*/
+
+3. Tarpai sąlygose,funkcijose
+
+	3.1 Visada yra vienas tarpas po sąlygos (if'o, while'o, for'o),
+	    pvz.:
+	    if (...)		//teisingai
+	    while (...)		//teisingai
+	    for (...)		//teisingai
+
+	    if(...)		//neteisingai
+	    while(...)		//neteisingai
+	    for(...)		//neteisingai
+
+	3.2 Tarpų nereikia deklaruojant/iskvieciant funkcijas, pvz:
+	    void function(...);	//teisingai
+	     function(...);	//teisingai
+	    void function (...); //neteisingai
+	     function (...);	//neteisingai
+
+	3.3 Tarpus visada reikia dėti prieš bei po visais operatoriais, išskyrus: "*", po rodyklės simbolio
+ 	nededamas tarpas, taip pat, kaip ir su "->" rodyklės operatoriaus simboliu.
+	Tarpas po kablelio (po operacijos) yra privalomas, pries - ne, pvz.:
+	x + y;		//teisingai
+	x+y		//neteisingai
+	int *ptr;	//teisingai
+	int * ptr;	//neteisingai
+	int* ptr;	//neteisingai
+	int a, b;	//teisingai
+	int a , b;	//neteisingai
+	int a,b;	//neteisingai
+	
+4. Skliaustai "{ }" sąlygose
+	Tinkamas naudojimas, pvz.:
+if (x > 0)
+{
+    printf("x is positive\n");
+}
+else if (x < 0)
+{
+    printf("x is negative\n");
+}
+else
+{
+    printf("x is zero\n");
+}
+	
+	Netinkamas naudojimas:
+
+if (x < 0) {
+    printf("x is negative\n");
+} else if (x < 0) {
+    printf("x is negative\n");
+}
+
+5. Tuščios eilutės
+	5.1 Tuščia eilutė reikalinga tam, kad kodas būtų aiškiau įskaitomas, bloko uždarymui ir panašiai
+	5.2 Funkcijos privalo turėti bent vienos eilutės tarpą.
+
+6.	
+	6.1 Po switch reikalingas vienas tarpas, switch atvejai turi būti atskirti papildomu eilutės tarpu.
+	6.2 Kiekvienas atvejis (taip pat, kaip ir "default), pasibaigia su "break".
+	Tinkamas naudojimas, pvz.:
+ 	switch (n)
+{
+    case -1:
+        printf("n is -1\n");
+        break;
+
+    case 1:
+        printf("n is 1\n");
+        break;
+
+    default:
+        printf("n is neither -1 nor 1\n");
+        break;
+}
+
+7. Tabuliacija
+	7.1 Tabuliacija privaloma, norint korektiškai lygiuoti vertikaliai bloką
+	7.2 Su tabuliacija bloko viduje viskas korekšitkai stumiama dešinėn
+	Tinkamas pavyzdys, pvz.:
+	
+int main()
+{
+	printf("Labas, pasauli!");
+}
+
+	netinkamas pavyzdys, pvz.:
+int main()
+{
+printf("Labas, pasauli!");
+}
+
+
+
+
+
